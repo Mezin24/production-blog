@@ -10,7 +10,6 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
   return (
     <header className={classNames(cls.Navbar, {}, [className])}>
-      <ThemeSwitcher />
       <div className={cls.links}>
         <AppLink to='/' theme={AppLinkTheme.INVERTED}>
           Home
