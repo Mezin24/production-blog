@@ -4,6 +4,22 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export const buildLoaders = (options: BuildOptions): webpack.ModuleOptions => {
   const { isDev } = options;
+
+  const svgrLoader = {
+    test: /\.svg$/i,
+    issuer: /\.[jt]sx?$/,
+    use: ['@svgr/webpack'],
+  };
+
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+    use: [
+      {
+        loader: 'file-loader',
+      },
+    ],
+  };
+
   const tsLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
@@ -31,6 +47,6 @@ export const buildLoaders = (options: BuildOptions): webpack.ModuleOptions => {
   };
 
   return {
-    rules: [tsLoader, scssLoader],
+    rules: [svgrLoader, fileLoader, tsLoader, scssLoader],
   };
 };
