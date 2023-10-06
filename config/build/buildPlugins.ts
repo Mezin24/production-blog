@@ -17,5 +17,8 @@ export const buildPlugins = (
       filename: 'css/[name].css',
       chunkFilename: 'css/[id].css',
     }),
+    new webpack.DefinePlugin({
+      __IS_DEV__: isDev,
+    }),
   ];
 };
