@@ -1,15 +1,14 @@
-import path from 'path';
+import webpack from 'webpack';
+import { buildDevServer } from './buildDevServer';
 import { buildLoaders } from './buildLoaders';
 import { buildPlugins } from './buildPlugins';
 import { buildResolvers } from './buildResolvers';
 import { BuildOptions } from './types/webpackBuild';
-import webpack from 'webpack';
-import { buildDevServer } from './buildDevServer';
 
 export const buildWebpackConfig = (
-  options: BuildOptions
+  options: BuildOptions,
 ): webpack.Configuration => {
-  const { isDev, mode, paths, port } = options;
+  const { isDev, mode, paths } = options;
   return {
     mode,
     entry: paths.entry,

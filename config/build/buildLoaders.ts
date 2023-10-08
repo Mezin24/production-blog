@@ -1,6 +1,6 @@
 import webpack from 'webpack';
-import { BuildOptions } from './types/webpackBuild';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { BuildOptions } from './types/webpackBuild';
 
 export const buildLoaders = (options: BuildOptions): webpack.ModuleOptions => {
   const { isDev } = options;
@@ -45,8 +45,7 @@ export const buildLoaders = (options: BuildOptions): webpack.ModuleOptions => {
         loader: 'css-loader',
         options: {
           modules: {
-            auto: (resourcePath: string) =>
-              Boolean(resourcePath.includes('.module')),
+            auto: (resourcePath: string) => Boolean(resourcePath.includes('.module')),
             localIdentName: isDev
               ? '[path][name]__[local]--[hash:base64:5]'
               : '[hash:base64:5]',

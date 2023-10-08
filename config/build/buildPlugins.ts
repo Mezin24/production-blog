@@ -1,12 +1,11 @@
-import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { BuildOptions } from './types/webpackBuild';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { BuildOptions } from './types/webpackBuild';
 
 export const buildPlugins = (
-  options: BuildOptions
+  options: BuildOptions,
 ): webpack.WebpackPluginInstance[] => {
   const { isDev, paths } = options;
 
