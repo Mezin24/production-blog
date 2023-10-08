@@ -8,11 +8,21 @@ import cls from './Sidebar.module.scss';
 interface SidebarProps {
   className?: string;
 }
-export const Sidebar = ({ className }: SidebarProps) => {
-  const [collapsed, setCollapsed] = useState(false);
 
+const LOCAL_STORAGE_COLLAPSED_STATE = 'web_app_collapsed';
+const defaultState =
+  (JSON.parse(
+    localStorage.getItem(LOCAL_STORAGE_COLLAPSED_STATE)
+  ) as boolean) || false;
+
+export const Sidebar = ({ className }: SidebarProps) => {
+  const [collapsed, setCollapsed] = useState(defaultState);
   const toggleCollapsed = () => {
     setCollapsed((prev) => !prev);
+    localStorage.setItem(
+      LOCAL_STORAGE_COLLAPSED_STATE,
+      JSON.stringify(!collapsed)
+    );
   };
 
   return (

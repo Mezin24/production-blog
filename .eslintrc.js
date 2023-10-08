@@ -57,6 +57,7 @@ module.exports = {
       },
     ],
     'comma-dangle': ['off'],
+    'operator-linebreak': ['off'],
   },
   globals: {
     __IS_DEV__: true,
