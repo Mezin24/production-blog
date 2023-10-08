@@ -56,6 +56,7 @@ module.exports = {
         code: 100,
       },
     ],
+    'comma-dangle': ['off'],
   },
   globals: {
     __IS_DEV__: true,
