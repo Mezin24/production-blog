@@ -58,6 +58,7 @@ module.exports = {
     ],
     'comma-dangle': ['off'],
     'operator-linebreak': ['off'],
+    'jsx-quotes': ['warn', { preferSingle: true }],
   },
   globals: {
     __IS_DEV__: true,
