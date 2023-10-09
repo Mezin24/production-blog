@@ -11,6 +11,11 @@ export default {
   rootDir: '../../',
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)'],
   testEnvironment: 'jsdom',
+  modulePaths: ['<rootDir>src'],
+  setupFilesAfterEnv: ['<rootDir>/config/jest/setupTest.ts'],
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+  },
 
   // roots: ['<rootDir>'],
   // coverageReporters: ['json', 'text', 'lcov', 'clover'],
