@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher/ThemeSwitcher';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from 'shared/ui/Button/Button';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import cls from './Sidebar.module.scss';
@@ -19,11 +19,14 @@ export const Sidebar = ({ className }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(defaultState);
   const toggleCollapsed = () => {
     setCollapsed((prev) => !prev);
+  };
+
+  useEffect(() => {
     localStorage.setItem(
       LOCAL_STORAGE_COLLAPSED_STATE,
-      JSON.stringify(!collapsed)
+      JSON.stringify(collapsed)
     );
-  };
+  }, [collapsed]);
 
   return (
     <aside
