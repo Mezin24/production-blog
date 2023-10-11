@@ -24,7 +24,7 @@ describe('classNames', () => {
   test('with mods false', () => {
     const expectValue = 'class class1 class2 scrolled';
     expect(
-      classNames('class', { clecked: false, scrolled: true }, [
+      classNames('class', { clicked: false, scrolled: true }, [
         'class1',
         'class2',
       ])
@@ -34,7 +34,7 @@ describe('classNames', () => {
   test('with mods undefined', () => {
     const expectValue = 'class class1 class2 scrolled';
     expect(
-      classNames('class', { clecked: undefined, scrolled: true }, [
+      classNames('class', { clicked: undefined, scrolled: true }, [
         'class1',
         'class2',
       ])
