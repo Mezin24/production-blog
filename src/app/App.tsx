@@ -9,9 +9,9 @@ const App = () => {
   const { theme } = useTheme();
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Suspense fallback="">
+      <Suspense fallback=''>
         <Navbar />
-        <div className="page-wrapper">
+        <div className='page-wrapper'>
           <Sidebar />
           <AppRouter />
         </div>

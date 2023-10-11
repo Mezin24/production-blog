@@ -58,14 +58,15 @@ module.exports = {
     ],
     'comma-dangle': ['off'],
     'operator-linebreak': ['off'],
-    'jsx-quotes': ['warn', { preferSingle: true }],
+    'jsx-quotes': ['error', 'prefer-single'],
+    'implicit-arrow-linebreak': 'warn',
   },
   globals: {
     __IS_DEV__: true,
   },
   overrides: [
     {
-      files: ['**/src/**/*.test.tsx'],
+      files: ['**/src/**/*.test.{tsx,ts}'],
       rules: {
         'i18next/no-literal-string': 'off',
       },

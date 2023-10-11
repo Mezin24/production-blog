@@ -10,7 +10,7 @@ export const AppRouter = () => (
         <Route
           key={route.path}
           path={route.path}
-          element={<div className="page-content">{route.element}</div>}
+          element={<div className='page-content'>{route.element}</div>}
         />
       ))}
     </Routes>
