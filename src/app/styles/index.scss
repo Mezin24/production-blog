@@ -1,11 +1,20 @@
-@import './reset.scss';
-@import './variables/global.scss';
-@import './themes/normal.scss';
-@import './themes/dark.scss';
+@import "./reset";
+@import "./variables/global";
+@import "./themes/normal";
+@import "./themes/dark";
 
 .app {
   font: var(--font-m);
   min-height: 100vh;
   background-color: var(--bg-color);
-  color: var(--primary-color)
+  color: var(--primary-color);
+}
+
+.page-wrapper {
+  display: flex;
+}
+
+.page-content {
+  flex-grow: 1;
+  padding: 20px;
 }

@@ -6,7 +6,6 @@ const defaultTheme =
 
 export const ThemeProvider: FC = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
-  console.log(theme);
 
   const defaultValue = useMemo(
     () => ({
