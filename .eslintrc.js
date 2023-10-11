@@ -60,6 +60,7 @@ module.exports = {
     'operator-linebreak': ['off'],
     'jsx-quotes': ['error', 'prefer-single'],
     'implicit-arrow-linebreak': 'warn',
+    'wrap-iife': 'warn',
   },
   globals: {
     __IS_DEV__: true,
