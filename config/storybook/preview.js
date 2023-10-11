@@ -1,6 +1,6 @@
 import { addDecorator } from '@storybook/react';
 import { StyleDecorator } from '../../src/shared/config/storybook/styleDecorator/StyleDecorator';
-import { Theme } from '../../src/app/providers/theme/index.tsx';
+import { Theme } from '../../src/app/providers/theme';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { RouteDecorator } from '../../src/shared/config/storybook/RouteDecorator/RouteDecorator';
 
