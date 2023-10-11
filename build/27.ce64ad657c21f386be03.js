@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwev_blog=self.webpackChunkwev_blog||[]).push([[27],{27:(e,n,s)=>{s.r(n),s.d(n,{default:()=>c});var u=s(893);const c=function(){return(0,u.jsx)("div",{children:"Home"},void 0)}}}]);
