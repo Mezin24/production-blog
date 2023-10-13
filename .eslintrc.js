@@ -64,6 +64,8 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
     'object-curly-newline': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'no-param-reassign': 'off',
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
   },
