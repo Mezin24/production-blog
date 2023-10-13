@@ -20,6 +20,13 @@ Primary.args = {
   theme: ButtonTheme.PRIMARY,
 };
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: 'Text',
+  theme: ButtonTheme.PRIMARY,
+  disabled: true,
+};
+
 export const Inverted = Template.bind({});
 Inverted.args = {
   children: 'Text',

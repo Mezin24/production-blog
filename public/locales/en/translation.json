@@ -6,5 +6,7 @@
   "Страница не найдена": "Page not found",
   "Что то пошло не так": "Something went wrong",
   "Перезагрузить страницу": "Reload the page",
-  "Войти": "Enter"
+  "Войти": "Enter",
+  "Вы ввели неверный логин или пароль": "You enter invalid login or password",
+  "Форма авторизации": "Authorization Form"
 }
